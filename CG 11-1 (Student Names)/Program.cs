@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace CG_11_1__Student_Names_
@@ -12,23 +13,24 @@ namespace CG_11_1__Student_Names_
             //students that have more than six quiz scores.Be sure to use a Student class.
 
 
-            Student student = new Student();
-            
-
-
-
-            
-
             string[] students = File.ReadAllLines(@"C:\Users\kstar\source\repos\CG 11-1 (Student Names)\CG 11-1 (Student Names)\StudentData.txt");
 
-            //foreach (string item in students)
-            //{
-                
+            List<Student> studentData = new List<Student>();
 
+            foreach (string item in students)
+            {
+                studentData.Add(new Student(item));
 
+            }
 
+            foreach (Student student in studentData)
+            {
+                if (student.Scores.Count > 6)
+                {
+                    Console.WriteLine($"These students have more than 6 Exam scores: {student.Name}");
+                }
 
-            //}
+            }
 
 
             //StreamReader studentinfo = new StreamReader(@"C:\Users\kstar\source\repos\CG 11-1 (Student Names)\CG 11-1 (Student Names)\StudentData.txt");
