@@ -37,5 +37,11 @@ namespace CG_11_1__Student_Names_
                 }
             }
         }
+
+        //method to capitalize first letter of name of each student
+        public string StudentNameCap()
+        {
+            return char.ToUpper(this.Name[0]) + this.Name.Substring(1);
+        }
     }   
 }

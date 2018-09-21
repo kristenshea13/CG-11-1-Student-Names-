@@ -28,13 +28,12 @@ namespace CG_11_1__Student_Names_
 
             foreach (Student student in studentData)
             {
-                //foreach loop to loop through students in studentData list and print each name
-                //that has more than 6 exam scores
+                //loop through students in studentData list and print each name
+                //that has more than 6 exam scores using method from student class
+                //to capitalize first letter in each name
                 if (student.Scores.Count > 6)
                 {
-                    //capitalize the first letter in each name that prints
-                    string studentCap = char.ToUpper(student.Name[0]) + student.Name.Substring(1);
-                    Console.WriteLine(studentCap);
+                    Console.WriteLine(student.StudentNameCap());
                 }
 
             }
