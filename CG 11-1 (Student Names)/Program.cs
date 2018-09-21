@@ -27,7 +27,8 @@ namespace CG_11_1__Student_Names_
             {
                 if (student.Scores.Count > 6)
                 {
-                    Console.WriteLine($"These students have more than 6 Exam scores: {student.Name}");
+                    string studentCap = char.ToUpper(student.Name[0]) + student.Name.Substring(1);
+                    Console.WriteLine($"These students have more than 6 Exam scores: {studentCap}");
                 }
 
             }
