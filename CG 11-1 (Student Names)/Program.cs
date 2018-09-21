@@ -23,12 +23,13 @@ namespace CG_11_1__Student_Names_
 
             }
 
+            Console.WriteLine("These students have more than 6 Exam scores: ");
             foreach (Student student in studentData)
             {
                 if (student.Scores.Count > 6)
                 {
                     string studentCap = char.ToUpper(student.Name[0]) + student.Name.Substring(1);
-                    Console.WriteLine($"These students have more than 6 Exam scores: {studentCap}");
+                    Console.WriteLine(studentCap);
                 }
 
             }
