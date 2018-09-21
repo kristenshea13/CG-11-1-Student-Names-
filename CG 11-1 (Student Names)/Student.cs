@@ -12,12 +12,13 @@ namespace CG_11_1__Student_Names_
 
         public List<int> Scores { get; set; }
 
+        //constructor using data from text file
         public Student(string studentData)
         {
             //initiate string for splitting data from text file
             string[] studentdataSplit = studentData.Split("; ");
 
-            //initiate the list of scores
+            //initiate int list of scores
             Scores = new List<int>();
 
             //designate first item on each line as name, 
@@ -28,16 +29,13 @@ namespace CG_11_1__Student_Names_
                 {
                     Name = studentdataSplit[i];
                 }
+
                 else
                 {
                     int score = int.Parse(studentdataSplit[i]);
                     Scores.Add(score);
                 }
-
             }
-
         }
-
-
     }   
 }

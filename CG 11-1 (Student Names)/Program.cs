@@ -17,13 +17,14 @@ namespace CG_11_1__Student_Names_
             //initiate new list for all the studentData for each student created
             List<Student> studentData = new List<Student>();
 
-            //foreach loop to add info to each student in list of studentData
+            //loop to add info to each student in list of studentData
             foreach (string item in students)
             {
                 studentData.Add(new Student(item));
             }
 
             Console.WriteLine("These students have more than 6 Exam scores: ");
+            Console.WriteLine();
 
             foreach (Student student in studentData)
             {
